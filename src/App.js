@@ -2,22 +2,37 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const name = 'André'
+  const newName = name.toUpperCase()
+
+  function soma(a,b,c){
+    return a + b + c;
+  }
+
+  function subt (a,b,c){
+    return a - b - c;
+  }
+
+  function multi (a,b,c){
+    return a * b * c;
+  }
+
+  function divis (a,b){
+    return a / b;
+  }
+
+  const url = 'https:/via.placeholder.com/120'
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h2>Alterando o JSX</h2>
+     <p>Olá {newName}</p>
+     <p>Soma: {soma(2, 2, 3)}</p>
+     <p>Subtração: {subt(10, 2, 3)}</p>
+     <p>Multiplicação: {multi(10, 2, 3)}</p>
+     <p>Divisão: {divis(10, 2)}</p>
+     <img src={url} alt="minha-imagem"/>
     </div>
   );
 }
